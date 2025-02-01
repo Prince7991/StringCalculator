@@ -9,5 +9,9 @@ RSpec.describe StringCalculator, type: :model do
     it 'add method returns the number itself for a single number' do
       expect(StringCalculator.add("1")).to eq(1)
     end
+
+    it 'add method returns the sum of two numbers' do
+      expect(StringCalculator.add("1, 4")).to eq(5)
+    end
   end
 end
