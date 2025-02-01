@@ -17,5 +17,9 @@ RSpec.describe StringCalculator, type: :model do
     it 'add method returns the sum of multiple numbers' do
       expect(StringCalculator.add("1, 4, 5")).to eq(10)
     end
+
+    it 'add method handles new lines between numbers' do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+    end
   end
 end
