@@ -13,5 +13,9 @@ RSpec.describe StringCalculator, type: :model do
     it 'add method returns the sum of two numbers' do
       expect(StringCalculator.add("1, 4")).to eq(5)
     end
+
+    it 'add method returns the sum of multiple numbers' do
+      expect(StringCalculator.add("1, 4, 5")).to eq(10)
+    end
   end
 end
